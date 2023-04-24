@@ -9,8 +9,8 @@ A simple backend application that creates short URLs based on long URLs provided
 - API documentation with Swagger UI
 
 ## Project Structure
-
-short-url/
+```
+url-shortener/
 │
 ├── src/
 │ ├── tests/
@@ -24,7 +24,7 @@ short-url/
 │ └── server.ts
 ├── package.json
 └── tsconfig.json
-
+```
 
 ## Getting Started
 
@@ -38,25 +38,25 @@ short-url/
 
 
 2. Install the dependencies:
-
-cd short-url
+```
+cd url-shortener
 npm install
-
+```
 
 ### Running the Application
 
 To start the development server, run:
-
+```
 npm run dev
-
+```
 The server will start on port 3000. You can access the API documentation at [http://localhost:3000/docs](http://localhost:3000/docs).
 
 ### Running Tests
 
 To run the unit tests, use the following command:
-
+```
 npm jest
-
+```
 
 ## API Endpoints
 
@@ -65,4 +65,4 @@ npm jest
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
