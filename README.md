@@ -13,12 +13,12 @@ A simple backend application that creates short URLs based on long URLs provided
 url-shortener/
 │
 ├── src/
-│ ├── tests/
+│ ├── __tests__/
 │ │ └── services/
 │ │ │ └── ShortUrlService.test.ts
 │ ├── controllers/
 │ │ └── ShortUrlController.ts
-│ │ └── services/
+│ ├── services/
 │ │ │ └── ShortUrlService.ts
 │ ├── application.ts
 │ └── server.ts
