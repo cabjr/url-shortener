@@ -1,0 +1,53 @@
+openapi: 3.0.0
+info:
+  title: Short URL Service
+  description: A simple API to create shortened URLs from long URLs
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+paths:
+  /short-url:
+    post:
+      summary: Create a shortened URL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                longUrl:
+                  type: string
+                  format: uri
+                  description: The long URL to be shortened
+              required:
+                - longUrl
+      responses:
+        201:
+          description: shortened URL created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  shortUrl:
+                    type: string
+                    format: uri
+                    description: The generated shortened URL
+        400:
+          description: Invalid input or missing parameters
+
+  /{id}:
+    get:
+      summary: Redirect to the long URL
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        302:
+          description: Found, redirecting to the long URL
+        404:
+          description: Tiny URL not found
